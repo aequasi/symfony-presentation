@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}SDPHP Symfony Todo{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset( 'favicon.ico' ) }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset( '/bundles/sdphptodo/css/base.css' ) }}" />
+    </head>
+    <body>
+        <section id="todoapp">
+            {% block body %}{% endblock %}
+        </section>
+        {% block javascripts %}{% endblock %}
+        <script type="text/javascript" src="{{ asset( '/bundles/sdphptodo/js/jquery.js' ) }}" ></script>
+        <script type="text/javascript" src="{{ asset( '/bundles/sdphptodo/js/base.js' ) }}" ></script>
+    </body>
+</html>

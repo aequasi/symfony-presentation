@@ -1,0 +1,5 @@
+sdphp_todo:
+    resource: "@SDPHPTodoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

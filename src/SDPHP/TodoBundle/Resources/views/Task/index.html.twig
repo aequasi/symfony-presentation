@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Task list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr data-id="{{ entity.id }}" data-completed="{{ entity.status ? '1' : '0' }}" class="{{ entity.status ? 'completed' : '' }}">
+                <td>{{ entity.task }}</td>
+                <td class="status">{{ entity.status ? 'Completed' : 'Incomplete' }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
