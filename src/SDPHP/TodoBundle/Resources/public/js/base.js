@@ -1,4 +1,4 @@
-/*global jQuery, Handlebars */
+/*global jQuery */
 jQuery(function ($) {
 	'use strict';
 
